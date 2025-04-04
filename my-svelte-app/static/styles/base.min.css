@@ -41,7 +41,6 @@ div.fs {
 	position: absolute;
 }
 .image{
-	position: absolute; 
 	height: 864.000000px;
 	width: 594.000000px;
 	background-size: 100%;
@@ -247,7 +246,7 @@ z-index: -1;
 #page179{background-image:url("../images/page179.jpg");}
 #page180{background-image:url("../images/page180.jpg");}
 
-.t {position:absolute;
+.t {
     -webkit-transform-origin: bottom left;
     -ms-transform-origin: bottom left;
     transform-origin: bottom left;
@@ -255,8 +254,6 @@ z-index: -1;
     -ms-transform: scale(0.25);
     transform: scale(0.25);
     z-index: 2;
-    position:absolute;
-    width: 594.000000%;
     line-height: 1.5;
     white-space:pre;
 }

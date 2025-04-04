@@ -19,6 +19,23 @@
 </script>
 
 <div class="reveal">
+    <div class="slides">
+        {#if slideContents.length > 0}
+            {#each slideContents as html}
+                <section class="center-align">
+                    <div class="slide-inner">
+                        {@html html}
+                    </div>
+                </section>
+            {/each}
+        {:else}
+            <section class="center-align">
+                <h1>No slides available</h1>
+            </section>
+        {/if}
+    </div>
+</div>
+<!-- <div class="reveal">
 	<div class="slides">
 		{#if slideContents.length > 0}
 			{#each slideContents as html}
@@ -30,8 +47,31 @@
 			</section>
 		{/if}
 	</div>
-</div>
+</div> -->
 
+<style>
+    .center-align {
+        justify-content: center;
+        align-items: center;
+        height: 75.43vh; /* Full viewport height */
+        width: 28.49vw;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .slide-inner {
+        justify-content: center;
+        align-items: center;
+            max-width: 100%;
+            max-height: 100%;
+    }
+
+    .slide-inner img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+</style>
 
 <!-- <Slide>
     <h1>slide</h1>
