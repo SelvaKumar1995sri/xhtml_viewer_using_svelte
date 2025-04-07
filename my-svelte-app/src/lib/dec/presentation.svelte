@@ -19,7 +19,7 @@
 
     const pairSlides = (slides: string[]) => {
 		const pairs: string[][] = [];
-		for (let i = 2; i < slides.length; i += 2) {
+		for (let i = 2; i < slides.length; i += 1) {
 			pairs.push([slides[i], slides[i + 1] ?? '']); // Second slide might be undefined
 		}
 		return pairs;
@@ -53,11 +53,11 @@
                             <div class="book-slide">
                                 {@html pair[0]}
                             </div>
-                            {#if pair[1]}
+                            <!-- {#if pair[1]}
                                 <div class="book-slide">
                                     {@html pair[1]}
                                 </div>
-                            {/if}
+                            {/if} -->
                         </div>
                     </section>
                 {/each}
