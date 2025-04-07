@@ -53,7 +53,7 @@
     .center-align {
         justify-content: center;
         align-items: center;
-        height: 75.43vh; /* Full viewport height */
+        height: 699px; /* Full viewport height */
         width: 28.49vw;
         overflow: hidden;
         text-align: center;
@@ -62,8 +62,8 @@
     .slide-inner {
         justify-content: center;
         align-items: center;
-            max-width: 100%;
-            max-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
     }
 
     .slide-inner img {

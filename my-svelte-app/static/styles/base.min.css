@@ -39,12 +39,15 @@ div.fs {
 	height: 864.000000px;
 	width: 594.000000px;
 	position: absolute;
+	
 }
 .image{
-	height: 864.000000px;
-	width: 594.000000px;
+	height: 699px;
+	width: 481px;
 	background-size: 100%;
 	background-repeat: no-repeat;
+	display: block;
+  	margin: auto;
 }
 
 a {
