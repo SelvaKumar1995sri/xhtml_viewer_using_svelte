@@ -17,8 +17,7 @@
 		}
 	});
 
-	// Function to group slides into pairs (for book view)
-	const pairSlides = (slides: string[]) => {
+    const pairSlides = (slides: string[]) => {
 		const pairs: string[][] = [];
 		for (let i = 2; i < slides.length; i += 2) {
 			pairs.push([slides[i], slides[i + 1] ?? '']); // Second slide might be undefined
@@ -46,26 +45,28 @@
 
 <div class="reveal">
     <div class="slides">
-        {#if slideContents.length > 0}
-            {#each pairSlides(slideContents) as pair}
-                <section class="center-align">
-                    <div class="book-view">
-                        <div class="book-slide">
-                            {@html pair[0]}
-                        </div>
-                        {#if pair[1]}
+        <section>
+            {#if slideContents.length > 0}
+                {#each pairSlides(slideContents) as pair}
+                    <section class="vertical-slide">
+                        <div class="book-view">
                             <div class="book-slide">
-                                {@html pair[1]}
+                                {@html pair[0]}
                             </div>
-                        {/if}
-                    </div>
+                            {#if pair[1]}
+                                <div class="book-slide">
+                                    {@html pair[1]}
+                                </div>
+                            {/if}
+                        </div>
+                    </section>
+                {/each}
+            {:else}
+                <section class="center-align">
+                    <h1>No slides available</h1>
                 </section>
-            {/each}
-        {:else}
-            <section class="center-align">
-                <h1>No slides available</h1>
-            </section>
-        {/if}
+            {/if}
+        </section>
     </div>
 </div>
 <!-- <div class="reveal">
