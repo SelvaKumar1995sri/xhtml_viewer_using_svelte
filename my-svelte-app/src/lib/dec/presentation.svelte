@@ -16,15 +16,48 @@
 			console.error('❌ Error loading slides:', err);
 		}
 	});
+
+	// Function to group slides into pairs (for book view)
+	const pairSlides = (slides: string[]) => {
+		const pairs: string[][] = [];
+		for (let i = 2; i < slides.length; i += 2) {
+			pairs.push([slides[i], slides[i + 1] ?? '']); // Second slide might be undefined
+		}
+		return pairs;
+	};
 </script>
+
+<style>
+	.book-view {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+        
+	}
+	.book-slide {
+		width: 481px;
+        height: 699px;
+		border: 1px solid #ccc;
+		padding: 1rem;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+		background-color: white;
+	}
+</style>
 
 <div class="reveal">
     <div class="slides">
         {#if slideContents.length > 0}
-            {#each slideContents as html}
+            {#each pairSlides(slideContents) as pair}
                 <section class="center-align">
-                    <div class="slide-inner">
-                        {@html html}
+                    <div class="book-view">
+                        <div class="book-slide">
+                            {@html pair[0]}
+                        </div>
+                        {#if pair[1]}
+                            <div class="book-slide">
+                                {@html pair[1]}
+                            </div>
+                        {/if}
                     </div>
                 </section>
             {/each}
@@ -49,7 +82,7 @@
 	</div>
 </div> -->
 
-<style>
+<!-- <style>
     .center-align {
         justify-content: center;
         align-items: center;
@@ -71,7 +104,7 @@
         height: auto;
         object-fit: contain;
     }
-</style>
+</style> -->
 
 <!-- <Slide>
     <h1>slide</h1>
