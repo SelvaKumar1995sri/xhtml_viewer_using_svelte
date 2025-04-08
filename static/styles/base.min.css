@@ -1,0 +1,262 @@
+html{color:#000;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:"inherit";font-size:inherit;font-weight:inherit;}
+input,textarea,select{font-size:100%;}
+legend{color:#000;}
+
+body
+{
+	padding: 0pt;
+	text-rendering:optimizeSpeed;
+}
+
+img {position: absolute; left: 0px; top: 0px; width: 594.000000px; height: 864.000000px; z-index: -1;}
+
+span {font-size: inherit;}
+ 
+
+div.fs {
+	left: 0px;
+	top:0px;
+	height: 864.000000px;
+	width: 594.000000px;
+	position: absolute;
+}
+.verso
+{
+	left: 0px;
+	top:0px;
+	height: 864.000000px;
+	width: 594.000000px;
+	position: absolute;
+	
+}
+.image{
+	height: 673px;
+	width: 441px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	display: block;
+  	margin: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:visited {
+  color: #666;
+}
+a:hover, a:focus, a:active {
+  text-decoration: underline;
+  color: red;
+}
+
+._ {
+display: inline-block;
+color: transparent;
+z-index: -1;
+}
+.c{position:absolute; border:0; padding:0; margin:0; display:block}
+#page001{background-image:url("../images/paws/page001.jpg");}
+#page002{background-image:url("../images/paws/page002.jpg");}
+#page003{background-image:url("../images/paws/page003.jpg");}
+#page004{background-image:url("../images/paws/page004.jpg");}
+#page005{background-image:url("../images/paws/page005.jpg");}
+#page006{background-image:url("../images/paws/page006.jpg");}
+#page007{background-image:url("../images/paws/page007.jpg");}
+#page008{background-image:url("../images/paws/page008.jpg");}
+#page009{background-image:url("../images/paws/page009.jpg");}
+#page010{background-image:url("../images/paws/page010.jpg");}
+#page011{background-image:url("../images/paws/page011.jpg");}
+#page012{background-image:url("../images/paws/page012.jpg");}
+#page013{background-image:url("../images/paws/page013.jpg");}
+#page014{background-image:url("../images/paws/page014.jpg");}
+#page015{background-image:url("../images/paws/page015.jpg");}
+#page016{background-image:url("../images/paws/page016.jpg");}
+#page017{background-image:url("../images/paws/page017.jpg");}
+#page018{background-image:url("../images/paws/page018.jpg");}
+#page019{background-image:url("../images/paws/page019.jpg");}
+#page020{background-image:url("../images/paws/page020.jpg");}
+#page021{background-image:url("../images/paws/page021.jpg");}
+#page022{background-image:url("../images/paws/page022.jpg");}
+#page023{background-image:url("../images/paws/page023.jpg");}
+#page024{background-image:url("../images/paws/page024.jpg");}
+#page025{background-image:url("../images/paws/page025.jpg");}
+#page026{background-image:url("../images/paws/page026.jpg");}
+#page027{background-image:url("../images/paws/page027.jpg");}
+#page028{background-image:url("../images/paws/page028.jpg");}
+#page029{background-image:url("../images/paws/page029.jpg");}
+#page030{background-image:url("../images/paws/page030.jpg");}
+#page031{background-image:url("../images/paws/page031.jpg");}
+#page032{background-image:url("../images/paws/page032.jpg");}
+#page033{background-image:url("../images/paws/page033.jpg");}
+#page034{background-image:url("../images/paws/page034.jpg");}
+#page035{background-image:url("../images/paws/page035.jpg");}
+#page036{background-image:url("../images/paws/page036.jpg");}
+#page037{background-image:url("../images/paws/page037.jpg");}
+#page038{background-image:url("../images/paws/page038.jpg");}
+#page039{background-image:url("../images/paws/page039.jpg");}
+#page040{background-image:url("../images/paws/page040.jpg");}
+#page041{background-image:url("../images/paws/page041.jpg");}
+#page042{background-image:url("../images/paws/page042.jpg");}
+#page043{background-image:url("../images/paws/page043.jpg");}
+#page044{background-image:url("../images/paws/page044.jpg");}
+#page045{background-image:url("../images/paws/page045.jpg");}
+#page046{background-image:url("../images/paws/page046.jpg");}
+#page047{background-image:url("../images/paws/page047.jpg");}
+#page048{background-image:url("../images/paws/page048.jpg");}
+#page049{background-image:url("../images/paws/page049.jpg");}
+#page050{background-image:url("../images/paws/page050.jpg");}
+#page051{background-image:url("../images/paws/page051.jpg");}
+#page052{background-image:url("../images/paws/page052.jpg");}
+#page053{background-image:url("../images/paws/page053.jpg");}
+#page054{background-image:url("../images/paws/page054.jpg");}
+#page055{background-image:url("../images/paws/page055.jpg");}
+#page056{background-image:url("../images/paws/page056.jpg");}
+#page057{background-image:url("../images/paws/page057.jpg");}
+#page058{background-image:url("../images/paws/page058.jpg");}
+#page059{background-image:url("../images/paws/page059.jpg");}
+#page060{background-image:url("../images/paws/page060.jpg");}
+#page061{background-image:url("../images/paws/page061.jpg");}
+#page062{background-image:url("../images/paws/page062.jpg");}
+#page063{background-image:url("../images/paws/page063.jpg");}
+#page064{background-image:url("../images/paws/page064.jpg");}
+#page065{background-image:url("../images/paws/page065.jpg");}
+#page066{background-image:url("../images/paws/page066.jpg");}
+#page067{background-image:url("../images/paws/page067.jpg");}
+#page068{background-image:url("../images/paws/page068.jpg");}
+#page069{background-image:url("../images/paws/page069.jpg");}
+#page070{background-image:url("../images/paws/page070.jpg");}
+#page071{background-image:url("../images/paws/page071.jpg");}
+#page072{background-image:url("../images/paws/page072.jpg");}
+#page073{background-image:url("../images/paws/page073.jpg");}
+#page074{background-image:url("../images/paws/page074.jpg");}
+#page075{background-image:url("../images/paws/page075.jpg");}
+#page076{background-image:url("../images/paws/page076.jpg");}
+#page077{background-image:url("../images/paws/page077.jpg");}
+#page078{background-image:url("../images/paws/page078.jpg");}
+#page079{background-image:url("../images/paws/page079.jpg");}
+#page080{background-image:url("../images/paws/page080.jpg");}
+#page081{background-image:url("../images/paws/page081.jpg");}
+#page082{background-image:url("../images/paws/page082.jpg");}
+#page083{background-image:url("../images/paws/page083.jpg");}
+#page084{background-image:url("../images/paws/page084.jpg");}
+#page085{background-image:url("../images/paws/page085.jpg");}
+#page086{background-image:url("../images/paws/page086.jpg");}
+#page087{background-image:url("../images/paws/page087.jpg");}
+#page088{background-image:url("../images/paws/page088.jpg");}
+#page089{background-image:url("../images/paws/page089.jpg");}
+#page090{background-image:url("../images/paws/page090.jpg");}
+#page091{background-image:url("../images/paws/page091.jpg");}
+#page092{background-image:url("../images/paws/page092.jpg");}
+#page093{background-image:url("../images/paws/page093.jpg");}
+#page094{background-image:url("../images/paws/page094.jpg");}
+#page095{background-image:url("../images/paws/page095.jpg");}
+#page096{background-image:url("../images/paws/page096.jpg");}
+#page097{background-image:url("../images/paws/page097.jpg");}
+#page098{background-image:url("../images/paws/page098.jpg");}
+#page099{background-image:url("../images/paws/page099.jpg");}
+#page100{background-image:url("../images/paws/page100.jpg");}
+#page101{background-image:url("../images/paws/page101.jpg");}
+#page102{background-image:url("../images/paws/page102.jpg");}
+#page103{background-image:url("../images/paws/page103.jpg");}
+#page104{background-image:url("../images/paws/page104.jpg");}
+#page105{background-image:url("../images/paws/page105.jpg");}
+#page106{background-image:url("../images/paws/page106.jpg");}
+#page107{background-image:url("../images/paws/page107.jpg");}
+#page108{background-image:url("../images/paws/page108.jpg");}
+#page109{background-image:url("../images/paws/page109.jpg");}
+#page110{background-image:url("../images/paws/page110.jpg");}
+#page111{background-image:url("../images/paws/page111.jpg");}
+#page112{background-image:url("../images/paws/page112.jpg");}
+#page113{background-image:url("../images/paws/page113.jpg");}
+#page114{background-image:url("../images/paws/page114.jpg");}
+#page115{background-image:url("../images/paws/page115.jpg");}
+#page116{background-image:url("../images/paws/page116.jpg");}
+#page117{background-image:url("../images/paws/page117.jpg");}
+#page118{background-image:url("../images/paws/page118.jpg");}
+#page119{background-image:url("../images/paws/page119.jpg");}
+#page120{background-image:url("../images/paws/page120.jpg");}
+#page121{background-image:url("../images/paws/page121.jpg");}
+#page122{background-image:url("../images/paws/page122.jpg");}
+#page123{background-image:url("../images/paws/page123.jpg");}
+#page124{background-image:url("../images/paws/page124.jpg");}
+#page125{background-image:url("../images/paws/page125.jpg");}
+#page126{background-image:url("../images/paws/page126.jpg");}
+#page127{background-image:url("../images/paws/page127.jpg");}
+#page128{background-image:url("../images/paws/page128.jpg");}
+#page129{background-image:url("../images/paws/page129.jpg");}
+#page130{background-image:url("../images/paws/page130.jpg");}
+#page131{background-image:url("../images/paws/page131.jpg");}
+#page132{background-image:url("../images/paws/page132.jpg");}
+#page133{background-image:url("../images/paws/page133.jpg");}
+#page134{background-image:url("../images/paws/page134.jpg");}
+#page135{background-image:url("../images/paws/page135.jpg");}
+#page136{background-image:url("../images/paws/page136.jpg");}
+#page137{background-image:url("../images/paws/page137.jpg");}
+#page138{background-image:url("../images/paws/page138.jpg");}
+#page139{background-image:url("../images/paws/page139.jpg");}
+#page140{background-image:url("../images/paws/page140.jpg");}
+#page141{background-image:url("../images/paws/page141.jpg");}
+#page142{background-image:url("../images/paws/page142.jpg");}
+#page143{background-image:url("../images/paws/page143.jpg");}
+#page144{background-image:url("../images/paws/page144.jpg");}
+#page145{background-image:url("../images/paws/page145.jpg");}
+#page146{background-image:url("../images/paws/page146.jpg");}
+#page147{background-image:url("../images/paws/page147.jpg");}
+#page148{background-image:url("../images/paws/page148.jpg");}
+#page149{background-image:url("../images/paws/page149.jpg");}
+#page150{background-image:url("../images/paws/page150.jpg");}
+#page151{background-image:url("../images/paws/page151.jpg");}
+#page152{background-image:url("../images/paws/page152.jpg");}
+#page153{background-image:url("../images/paws/page153.jpg");}
+#page154{background-image:url("../images/paws/page154.jpg");}
+#page155{background-image:url("../images/paws/page155.jpg");}
+#page156{background-image:url("../images/paws/page156.jpg");}
+#page157{background-image:url("../images/paws/page157.jpg");}
+#page158{background-image:url("../images/paws/page158.jpg");}
+#page159{background-image:url("../images/paws/page159.jpg");}
+#page160{background-image:url("../images/paws/page160.jpg");}
+#page161{background-image:url("../images/paws/page161.jpg");}
+#page162{background-image:url("../images/paws/page162.jpg");}
+#page163{background-image:url("../images/paws/page163.jpg");}
+#page164{background-image:url("../images/paws/page164.jpg");}
+#page165{background-image:url("../images/paws/page165.jpg");}
+#page166{background-image:url("../images/paws/page166.jpg");}
+#page167{background-image:url("../images/paws/page167.jpg");}
+#page168{background-image:url("../images/paws/page168.jpg");}
+#page169{background-image:url("../images/paws/page169.jpg");}
+#page170{background-image:url("../images/paws/page170.jpg");}
+#page171{background-image:url("../images/paws/page171.jpg");}
+#page172{background-image:url("../images/paws/page172.jpg");}
+#page173{background-image:url("../images/paws/page173.jpg");}
+#page174{background-image:url("../images/paws/page174.jpg");}
+#page175{background-image:url("../images/paws/page175.jpg");}
+#page176{background-image:url("../images/paws/page176.jpg");}
+#page177{background-image:url("../images/paws/page177.jpg");}
+#page178{background-image:url("../images/paws/page178.jpg");}
+#page179{background-image:url("../images/paws/page179.jpg");}
+#page180{background-image:url("../images/paws/page180.jpg");}
+
+.t {
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    transform-origin: bottom left;
+    -webkit-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    transform: scale(0.25);
+    z-index: 2;
+    line-height: 1.5;
+    white-space:pre;
+}
