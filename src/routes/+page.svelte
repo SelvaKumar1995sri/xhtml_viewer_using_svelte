@@ -29,11 +29,11 @@
 
 {#if !selectedBook}
 	<h1 class="mb-4 text-2xl font-bold">📚 E-Book Library</h1>
-	<div class="grid grid-cols-2 gap-6 md:grid-cols-3">
+	<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
 		{#each books as book (book)}
 			<button
 				type="button"
-				class="cursor-pointer text-center"
+				class="cursor-pointer text-center p-2 bg-white rounded-xl shadow hover:shadow-lg transition duration-200"
 				on:click={() => {
                     console.log('Book clicked:', book); // Debugging: Log the clicked book
                     openBook(book);
@@ -46,12 +46,18 @@
                 }}
 				aria-label={`Open book ${book}`}
 			>
-				<img
-					src={`/covers/${book}.jpg`}
-					alt={`Cover of ${book}`}
-					class="w-full rounded-lg shadow"
-				>
-				<p class="mt-2 font-semibold">{book}</p>
+                <img
+                    src={`/covers/${book}.jpg`}
+                    alt={`Cover of ${book}`}
+                    on:error={(e) => {
+                        const target = e.target as HTMLImageElement | null;
+                        if (target) {
+                            target.src = `/covers/${book}.png`;
+                        }
+                    }}
+                    class="w-full max-w-[160px] h-[220px] object-cover rounded-md mb-2 mx-auto"
+                 />
+				<p class="text-sm font-semibold truncate">{book}</p>
 			</button>
 		{/each}
 	</div>
