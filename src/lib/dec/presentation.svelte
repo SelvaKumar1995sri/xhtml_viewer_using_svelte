@@ -28,6 +28,36 @@
         }
 	});
 
+    import Reveal from 'reveal.js';
+	import 'reveal.js/dist/reveal.css';
+	import 'reveal.js/dist/theme/white.css';
+    import { tick } from 'svelte';
+
+    let revealInstance: any;
+
+	onMount(async () => {
+		if (book) {
+			try {
+				const res = await fetch(`/api/html_files?book=${book}`);
+				if (!res.ok) throw new Error(`Failed to fetch slides`);
+				slideContents = await res.json();
+			} catch (err) {
+				console.error(err);
+			}
+
+			// Initialize Reveal after DOM updates
+			await tick(); // Wait for DOM rendering
+			revealInstance = new Reveal();
+			revealInstance.initialize({
+				width: "100%",
+				height: "100%",
+				hash: true,
+				center: false,
+				slideNumber: true,
+			});
+		}
+	});
+
 	// Function to group slides into pairs (for book view)
 	const pairSlides = (slides: string[]) => {
         console.log('🔄 Pairing slides:', slides);
@@ -38,6 +68,8 @@
         console.log('✅ Paired slides:', pairs);
 		return pairs;
 	};
+
+
 </script>
 
 <div class="reveal">
@@ -274,17 +306,71 @@
 </Slide> -->
 
 <style>
+    .reveal {
+		width: 100%;
+		height: 100vh;
+	}
+    .slides {
+		text-align: left;
+	}   
 	.book-view {
 		display: flex;
 		gap: 1rem;
 		justify-content: center;
 	}
-	.book-slide {
-		width: 481px;
-		height: 699px;
+	/* .book-slide {
+		width: 1000px;
+		height: 1234px;
 		border: 1px solid #ccc;
 		padding: 1rem;
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 		background-color: white;
-	}
+	} */
+
+    .reveal {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slides {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .book-view {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .book-slide {
+        flex: 1;
+        max-width: 50vw;
+        max-height: 90vh;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        background: white;
+        border-radius: 8px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .book-slide :global(img) {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        }
 </style>

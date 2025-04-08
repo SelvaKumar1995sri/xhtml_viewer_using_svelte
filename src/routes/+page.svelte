@@ -28,45 +28,88 @@
 </script>
 
 {#if !selectedBook}
-	<h1 class="mb-4 text-2xl font-bold">📚 E-Book Library</h1>
-	<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+	<h1 class="title">📚 E-Book Library</h1>
+
+	<div class="grid-container">
 		{#each books as book (book)}
-			<button
-				type="button"
-				class="cursor-pointer text-center p-2 bg-white rounded-xl shadow hover:shadow-lg transition duration-200"
-				on:click={() => {
-                    console.log('Book clicked:', book); // Debugging: Log the clicked book
-                    openBook(book);
-                }}
-                on:keydown={(e) => {
-                    if (e.key === 'Enter') {
-                        console.log('Book selected with Enter key:', book); // Debugging: Log keyboard selection
-                        openBook(book);
-                    }
-                }}
+			<div class="book-card" role="button" tabindex="0"
+				on:click={() => openBook(book)}
+				on:keydown={(e) => {
+					if (e.key === 'Enter') openBook(book);
+				}}
 				aria-label={`Open book ${book}`}
 			>
-                <img
-                    src={`/covers/${book}.jpg`}
-                    alt={`Cover of ${book}`}
-                    on:error={(e) => {
-                        const target = e.target as HTMLImageElement | null;
-                        if (target) {
-                            target.src = `/covers/${book}.png`;
-                        }
-                    }}
-                    class="w-full max-w-[160px] h-[220px] object-cover rounded-md mb-2 mx-auto"
-                 />
-				<p class="text-sm font-semibold truncate">{book}</p>
-			</button>
+				<div class="image-frame">
+					<img
+						src={`/covers/${book}.jpg`}
+						alt={`Cover of ${book}`}
+						on:error={(e) => {
+							const target = e.target as HTMLImageElement | null;
+							if (target) target.src = `/covers/${book}.png`;
+						}}
+					>
+				</div>
+				<p class="book-title">{book}</p>
+			</div>
 		{/each}
 	</div>
+
+	<style>
+		.title {
+			font-size: 4rem;
+			font-weight: bold;
+			margin-bottom: 1rem;
+		}
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			gap: 20px;
+		}
+		.book-card {
+			width: 280px;
+			height: 360px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 10px;
+			background: white;
+			border-radius: 10px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			cursor: pointer;
+			transition: transform 0.2s ease;
+		}
+		/* .book-card:hover {
+			transform: scale(1.03);
+		} */
+		.image-frame {
+			width: 140px;
+			height: 200px;
+			background-color: #f1f1f1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			border-radius: 6px;
+		}
+		.image-frame img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.book-title {
+			margin-top: 8px;
+			font-size: 0.9rem;
+			font-weight: 600;
+			text-align: center;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 100%;
+		}
+	</style>
 {:else}
 	<button
-        on:click={() => {
-            console.log('Back button clicked'); // Debugging: Log back button click
-            goBack();
-        }}
+		on:click={() => goBack()}
 		class="mb-4 text-blue-600 underline"
 		aria-label="Go back to library"
 	>
